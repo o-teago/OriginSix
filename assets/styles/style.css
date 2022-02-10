@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    --header-height: 7.2rem;
+    --hue: 159;
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+}
+
+.divider-1 {
+    height: 0.1rem;
+    background: linear-gradient(
+        270deg,
+        hsla(var(--hue), 36%, 57%, 1) 0%,
+        hsla(var(--hue), 65%, 88%, 0.34) 100%
+    );
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font: 400 1.6rem 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background: var(--body-color);
+    -webkit-font-smoothing: antialised;
+}
+
+h1 {
+    font: 700 3rem 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+
+}
+
+#header{
+    border-bottom: 0.1rem solid #E4E4E4;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+}
+
+nav {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font: 700 2.1rem 'Poppins', sans-serif;
+    color: var(--title-color);
+
+}
+
+.logo span {
+    color: var(--base-color);
+}
+
+main {
+    margin-top: var(--header-height);
+}
+
+.container{
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+}
+
+.grid {
+    display: grid;
+    gap: 3.2rem;
+}
+
+.section {
+    padding: 8rem 0;
+}
+
+#home {
+    overflow: hidden;
+}
+
+#home .container {
+    margin: 0;
+}
+
+#home .image {
+    position: relative;
+}
+
+#home .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.8%;
+    z-index: 0;
+}
+
+#home .image img {
+    position: relative;
+    right: 4.7rem;
+}
+
+#home .image img,
+#home .image::before {
+    border-radius: 0.4rem;
+}
+
+#home .text {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+    text-align: center;
+}
+
+#home .text h1 {
+    margin-bottom: 1.6rem;
+}
+
+#home .text p {
+    margin-bottom: 3.2rem;
+}
+
+.button {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    padding: 1.8rem 3.2rem;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: var(--base-color-alt);
+}
