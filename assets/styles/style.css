@@ -181,6 +181,10 @@ nav.show div.icon-close{
     color: var(--base-color);
 }
 
+#header.scroll {
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.1);
+}
+
 main {
     margin-top: calc(var(--header-height) + 3.2rem);
 }
