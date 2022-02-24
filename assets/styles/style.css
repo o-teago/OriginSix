@@ -398,10 +398,15 @@ main {
 .swiper-slide {
     height: auto;
     padding: 6.4rem 1.6rem;
-}
+} 
 
 .swiper-pagination {
     position: relative;
+}
+
+.swiper-pagination-bullet {
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 .swiper-pagination-bullet-active {
