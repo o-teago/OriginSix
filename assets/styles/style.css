@@ -407,3 +407,41 @@ main {
 .swiper-pagination-bullet-active {
     background: var(--base-color);
 }
+
+/* contact */
+
+#contact .grid {
+    gap: 6.4rem;
+}
+
+#contact .text p {
+    margin-bottom: 3.2rem;
+}
+
+#contact .button {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: 23.6rem;
+}
+
+#contact .button i {
+    font-size: 2.4rem;
+    margin-right: 1rem;
+    
+}
+
+#contact .links ul.grid {
+    gap: 3.2rem
+}
+
+#contact .links ul.grid li {
+    display: flex;
+    align-items: center;
+}
+
+#contact .links ul.grid li i {
+    margin-right: 1.4rem;
+    font-size: 2.4rem;
+    color: var(--base-color);
+}
