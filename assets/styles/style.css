@@ -171,7 +171,7 @@ nav.show div.icon-close{
     top: 2.4rem;
 }
 
-.logo{
+.logo {
     font: 700 2.1rem 'Poppins', sans-serif;
     color: var(--title-color);
 
@@ -179,6 +179,10 @@ nav.show div.icon-close{
 
 .logo span {
     color: var(--base-color);
+}
+
+.logo-alt span {
+    color: var(--body-color);
 }
 
 #header.scroll {
@@ -449,4 +453,30 @@ main {
     margin-right: 1.4rem;
     font-size: 2.4rem;
     color: var(--base-color);
+}
+
+/* footer */
+
+footer {
+    background: var(--base-color);
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+}
+
+footer .brand p {
+    color: var(--text-color-light);
+    margin-bottom: 1.2rem;
+}
+
+footer .social a {
+    margin-right: 3.2rem;
+}
+
+footer .social i {
+    font-size: 2.4rem;
+    color: var(--text-color-light);
+    line-height: 0;
 }
