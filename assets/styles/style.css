@@ -473,10 +473,46 @@ footer .brand p {
 
 footer .social a {
     margin-right: 3.2rem;
+    transition: 0.3s;
+    display: inline-block;
+
+}
+
+footer .social a:hover {
+    transform: translateY(-8px);
 }
 
 footer .social i {
     font-size: 2.4rem;
     color: var(--text-color-light);
     line-height: 0;
+}
+
+/* back-to-top */
+
+.back-to-top {
+    background: var(--base-color);
+    position: fixed;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    padding: 0.8rem;
+    clip-path: circle();
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.back-to-top i {
+    color: var(--text-color-light);
+    font-size: 2.4rem;
 }

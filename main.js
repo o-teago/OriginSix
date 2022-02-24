@@ -2,8 +2,6 @@ const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 const links = document.querySelectorAll('nav ul li a')
 const header = document.querySelector('#header')
-const navHeight = header.offsetHeight;
-
 
 for(const element of toggle) {
     element.addEventListener('click', function() {
@@ -17,15 +15,19 @@ for(const link of links) {
     })
 }
 
-window.addEventListener('scroll', function() {
+// box shadow header
+
+function changeHeaderScroll() {
+    const navHeight = header.offsetHeight;
+
     if(this.window.scrollY >= navHeight){
         header.classList.add('scroll')
     }else{
         header.classList.remove('scroll')
     }
-})
+}
 
-// slider swwiper
+// slider swiper
 
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
@@ -51,5 +53,25 @@ scrollReveal.reveal(
     #about .image, #about .text,
     #services header, #services .card,
     #testimonials header, #testimonials .testimonials,
-    #contact .text, #contact ul li`, { interval: 100}
+    #contact .text, #contact ul li,
+    footer .brand, footer .social`,
+     { interval: 100}
 )
+
+// back to top button
+function backToTop() {
+    const backToTopButton = document.querySelector('.back-to-top')
+
+    if(window.scrollY >= 560){
+        backToTopButton.classList.add('show')
+    }
+    else{
+        backToTopButton.classList.remove('show')
+    }
+}
+
+// listener scroll window
+window.addEventListener('scroll', function() {
+    changeHeaderScroll()
+    backToTop()
+})
