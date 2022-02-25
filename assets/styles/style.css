@@ -19,10 +19,6 @@ html{
     --body-color: hsl(0 0% 98%);
 }
 
-ul {
-    list-style: none;
-}
-
 .divider-1 {
     height: 0.1rem;
     background: linear-gradient(
@@ -39,6 +35,10 @@ ul {
         hsla(var(--hue), 65%, 88%, 0.34),
         hsla(var(--hue), 36%, 57%, 1)
     );
+}
+
+ul {
+    list-style: none;
 }
 
 a {
@@ -398,15 +398,15 @@ main {
 }
 
 /* swiper */
+.swiper-container {
+    overflow: hidden;
+}
 
 .swiper-slide {
     height: auto;
     padding: 6.4rem 1.6rem;
 } 
 
-.swiper-pagination {
-    position: relative;
-}
 
 .swiper-pagination-bullet {
     width: 1.2rem;
@@ -418,7 +418,6 @@ main {
 }
 
 /* contact */
-
 #contact .grid {
     gap: 6.4rem;
 }
@@ -516,3 +515,15 @@ footer .social i {
     color: var(--text-color-light);
     font-size: 2.4rem;
 }
+
+/* media queries */
+
+/* extra large devices: 1200 > */
+/* large devices: 1020 > */
+/* large devices: 992 > */
+@media (min-width: 992px) {
+    .title {
+        font-size: 3.6rem;
+    }
+}
+/* medium devices: 767 > */
